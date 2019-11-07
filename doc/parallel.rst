@@ -151,7 +151,7 @@ by it-self even for calls without the context manager.
 .. include:: parallel_numpy.rst
 
 
-Avoiding over-subscription of CPU ressources
+Avoiding over-subscription of CPU resources
 ============================================
 
 The computation parallelism relies on the usage of multiple CPUs to perform the
@@ -168,7 +168,7 @@ manage internally a thread-pool to perform their computations. The default
 behavior is generally to use number of thread equals to the number of CPU
 available. When these libraries are used with :class:`joblib.Parallel`, each
 worker will spawn its thread-pools, resulting in a massive over-subscription
-of the ressources that can slow down the computation compared to sequential
+of the resources that can slow down the computation compared to sequential
 one. To cope with this problem, joblib tells supported third-party libraries
 to use a limited number of threads in workers managed by the ``'loky'``
 backend: by default each worker process will have environment variables set to
